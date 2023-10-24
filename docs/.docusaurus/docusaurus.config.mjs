@@ -4,13 +4,13 @@
  * Modify the docusaurus.config.js file at your site's root instead.
  */
 export default {
-  "title": "My Site",
-  "tagline": "Dinosaurs are cool",
+  "title": "Andevs Documentation",
+  "tagline": "Documentation for Andevs Project",
   "favicon": "img/favicon.ico",
   "url": "https://your-docusaurus-test-site.com",
   "baseUrl": "/",
-  "organizationName": "facebook",
-  "projectName": "docusaurus",
+  "organizationName": "andevs",
+  "projectName": "docsandevs",
   "onBrokenLinks": "throw",
   "onBrokenMarkdownLinks": "warn",
   "i18n": {
@@ -25,16 +25,8 @@ export default {
     [
       "classic",
       {
-        "docs": {
-          "sidebarPath": "C:\\Users\\gabri\\OneDrive\\Documentos\\GitHub\\andevs\\sidebars.js",
-          "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/"
-        },
-        "blog": {
-          "showReadingTime": true,
-          "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/"
-        },
         "theme": {
-          "customCss": "C:\\Users\\gabri\\OneDrive\\Documentos\\GitHub\\andevs\\src\\css\\custom.css"
+          "customCss": "/home/joao/Documents/GitHub/andevs/docs/src/css/custom.css"
         }
       }
     ]
@@ -42,30 +34,13 @@ export default {
   "themeConfig": {
     "image": "img/docusaurus-social-card.jpg",
     "navbar": {
-      "title": "My Site",
+      "title": "Andevs",
       "logo": {
-        "alt": "My Site Logo",
+        "alt": "Team logo",
         "src": "img/logo.svg"
       },
-      "items": [
-        {
-          "type": "docSidebar",
-          "sidebarId": "tutorialSidebar",
-          "position": "left",
-          "label": "Tutorial"
-        },
-        {
-          "to": "/blog",
-          "label": "Blog",
-          "position": "left"
-        },
-        {
-          "href": "https://github.com/facebook/docusaurus",
-          "label": "GitHub",
-          "position": "right"
-        }
-      ],
-      "hideOnScroll": false
+      "hideOnScroll": false,
+      "items": []
     },
     "footer": {
       "style": "dark",
@@ -80,37 +55,23 @@ export default {
           ]
         },
         {
-          "title": "Community",
+          "title": "Outros",
           "items": [
-            {
-              "label": "Stack Overflow",
-              "href": "https://stackoverflow.com/questions/tagged/docusaurus"
-            },
-            {
-              "label": "Discord",
-              "href": "https://discordapp.com/invite/docusaurus"
-            },
-            {
-              "label": "Twitter",
-              "href": "https://twitter.com/docusaurus"
-            }
-          ]
-        },
-        {
-          "title": "More",
-          "items": [
-            {
-              "label": "Blog",
-              "to": "/blog"
-            },
             {
               "label": "GitHub",
-              "href": "https://github.com/facebook/docusaurus"
+              "href": "https://github.com/2023M8T2-Inteli/andevs"
+            },
+            {
+              "label": "Inteli",
+              "href": "https://www.inteli.edu.br"
+            },
+            {
+              "label": "Docusaurus",
+              "href": "https://docusaurus.io"
             }
           ]
         }
-      ],
-      "copyright": "Copyright © 2023 My Project, Inc. Built with Docusaurus."
+      ]
     },
     "prism": {
       "theme": {

@@ -1,6 +1,6 @@
 export default [
-  require('C:\\Users\\gabri\\OneDrive\\Documentos\\GitHub\\andevs\\node_modules\\infima\\dist\\css\\default\\default.css'),
-  require('C:\\Users\\gabri\\OneDrive\\Documentos\\GitHub\\andevs\\node_modules\\@docusaurus\\theme-classic\\lib\\prism-include-languages'),
-  require('C:\\Users\\gabri\\OneDrive\\Documentos\\GitHub\\andevs\\node_modules\\@docusaurus\\theme-classic\\lib\\nprogress'),
-  require('C:\\Users\\gabri\\OneDrive\\Documentos\\GitHub\\andevs\\src\\css\\custom.css'),
+  require('/home/joao/Documents/GitHub/andevs/docs/node_modules/infima/dist/css/default/default.css'),
+  require('/home/joao/Documents/GitHub/andevs/docs/node_modules/@docusaurus/theme-classic/lib/prism-include-languages'),
+  require('/home/joao/Documents/GitHub/andevs/docs/node_modules/@docusaurus/theme-classic/lib/nprogress'),
+  require('/home/joao/Documents/GitHub/andevs/docs/src/css/custom.css'),
 ];
