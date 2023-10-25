@@ -2,6 +2,8 @@
 sidebar_position: 1
 ---
 
+# Análise Financeira
+
 A análise financeira é uma análise fundamental para o projeto que pretendemos criar, onde o objetivo principal dessa métrica é encontrar os gastos previstos caso a Ambev decida continuar o desenvolvimento do projeto em escala industrial. Ao examinar minuciosamente os custos envolvidos, é possível ter uma previsão dos gastos considerando um ano de desenvolvimento com equipe, modelos de IA em nuvem para o processamento de Linguagem, o preço de um robô AVG indústrial e sua implementação e impostos.
 
 | Serviços MVP          | Preço p/ ano    | Preço p/ mês  |
