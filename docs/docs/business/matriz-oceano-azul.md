@@ -12,7 +12,7 @@ Mediante algumas soluções que já existente no mercado, a tabela a seguir most
 
 |  | AnDevs | ABB Yumi IRB 14050 | ABB Fetch Freight | AutoStore (ABB) |
 | --- | --- | --- | --- | --- |
-| Capacidade de Carga | 4 | 9 | 7 | 10 |
+| Capacidade de Carga | 1 | 9 | 7 | 10 |
 | Mobilidade | 8 | 3 | 9 | 6 |
 | Preço de Implementação | 10 | 7 | 7 | * |
 | Instalação | 7 | 8 | 7 | 4 |
