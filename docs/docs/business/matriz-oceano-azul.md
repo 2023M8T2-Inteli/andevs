@@ -14,9 +14,9 @@ Mediante algumas soluções que já existente no mercado, a tabela a seguir most
 | --- | --- | --- | --- | --- |
 | Capacidade de Carga | 1 | 9 | 7 | 10 |
 | Mobilidade | 8 | 3 | 9 | 6 |
-| Preço de Implementação | 10 | 7 | 7 | * |
-| Instalação | 7 | 8 | 7 | 4 |
-| Custo de Manutenção | 9 | 4 | 5 | 5 |
+| Preço de Implementação | 9 | 4 | 5 | * |
+| Instalação | 7 | 6 | 5 | 4 |
+| Custo de Manutenção | 9 | 6 | 5 | 4 |
 | Possibilidade de melhorias futuras | 8 | 7 | 7 | 6 |
 
  *O valor varia de acordo com o tamanho do estoque /almoxarifado e a necessidade do tamanho das peças, necessitando assim uma análise de viabilidade técnica.
