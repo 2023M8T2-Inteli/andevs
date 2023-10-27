@@ -38,4 +38,4 @@ Com isso, temos também o preço de implementação e os impostos de projeto, fi
 
 Caso seja necessário a manutenção pós criação do produto, estimamos o preço da manutenção necessária seja definido em 5% do valor do projeto e seus impostos somados, sendo avaliado em **R$ 341.460,98**.
 
-O principal lucro do projeto além da venda do produto, seria a partir do serviço de manutenção do equipamento. Onde a AMBEV, caso compre o projeto, poderia oferecer também esse serviço de forma terceirizada, gerando um lucro maior e mais amplo a empresa.
+Caso a AMBEV opte por terceirizar o produto, vendendo a outras empresas, o principal lucro do projeto além da venda do produto seria a partir do serviço de manutenção do equipamento. Onde a AMBEV, caso compre o projeto, poderia oferecer também esse serviço, gerando um lucro maior e mais amplo a empresa.
