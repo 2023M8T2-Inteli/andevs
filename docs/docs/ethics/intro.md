@@ -9,4 +9,4 @@ A introdução de uma tecnologia inovadora tem o potencial de revolucionar proce
 - [Equidade e Justiça](https://www.linkedin.com/in/henriqueschilderlima/)
 - [Transparência e consentimento informado](https://www.linkedin.com/in/henriqueschilderlima/)
 - [Responsabilidade social](https://www.linkedin.com/in/kil-matheus-gomes-teixeira-78257020a/)
-- [Viés e discriminação](https://www.linkedin.com/in/kil-matheus-gomes-teixeira-78257020a/)
+- [Viés e discriminação](https://www.linkedin.com/in/tainara-rodrigues-teixeira/)
