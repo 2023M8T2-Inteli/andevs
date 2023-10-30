@@ -2,7 +2,7 @@
 sidebar_position: 7
 ---
 
-# SOM (Serviceable Obtainable Market):
+# SOM (Serviceable Obtainable Market)
 
 Aqui, o SOM é definido como a representação percentual dos almoxarifados da Ambev em relação ao SAM. O objetivo principal do projeto é atender todos os almoxarifados pertencentes à Ambev. Portanto, o SOM é a parcela do SAM que abrange todos os almoxarifados da Ambev. É uma porção específica do mercado de bebidas que a Ambev planeja alcançar com sucesso, garantindo a eficiência e a automação nos almoxarifados da empresa.
 

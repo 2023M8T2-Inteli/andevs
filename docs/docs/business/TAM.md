@@ -2,7 +2,7 @@
 sidebar_position: 5
 ---
 
-# TAM (Total Addressable Market):
+# TAM (Total Addressable Market)
 
 O TAM, ou Mercado Total Endereçável, representa o vasto oceano de oportunidades que se estende além dos horizontes da indústria de bebidas, abrangendo todas as empresas que administram almoxarifados de peças, independentemente do setor em que atuam. É um mercado que abriga uma variedade de empresas, desde as ligadas à indústria automotiva até aquelas envolvidas na manufatura, construção e muito mais. O TAM representa um universo potencial de demanda para um robô de autoatendimento de almoxarifado, onde a eficiência e a automação podem otimizar processos em galpões de peças de todas as formas e tamanhos.
 

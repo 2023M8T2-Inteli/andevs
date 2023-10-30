@@ -2,7 +2,7 @@
 sidebar_position: 6
 ---
 
-# SAM (Serviceable Addressable Market):
+# SAM (Serviceable Addressable Market)
 
 Dentro desse vasto universo, encontramos um nicho mais estratégico - o SAM, ou Mercado Endereçável Acessível. Aqui, focamos nossa atenção no setor de bebidas, como a icônica Ambev, e em empresas semelhantes que possuem demandas específicas relacionadas a seus almoxarifados de peças. O SAM representa um mercado que é não apenas acessível, mas também altamente relevante para a Ambev, considerando sua posição consolidada no setor de bebidas e sua compreensão aprofundada das necessidades desse mercado. É onde a implementação de um robô de autoatendimento se alinha perfeitamente com a experiência da Ambev.
 
