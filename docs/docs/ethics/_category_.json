@@ -3,7 +3,7 @@
   "position": 4,
   "link": {
     "type": "generated-index",
-    "description": "Descrição de toda a pesquisa de mercado realizada em torno do projeto. A introdução de uma tecnologia inovadora tem o potencial de revolucionar processos e melhorar significativamente a eficiência. No entanto, é crucial que examinemos de perto os impactos dessa implementação na sociedade e no meio ambiente. Nessa seção iremos avaliar os impactos no contexto do projeto de desenvolvimento de um robô de autoatendimento para o almoxarifado da AMBEV. Abordaremos cinco dimensões críticas: privacidade e proteção de dados, equidade e justiça, transparência e consentimento informado, responsabilidade social e viés e discriminação. Analisaremos cada uma dessas dimensões em detalhes, considerando suas implicações e fornecendo estratégias para mitigar possíveis preocupações. ",
+    "description":  "Descrição de toda a pesquisa de mercado realizada em torno do projeto. A introdução de uma tecnologia inovadora tem o potencial de revolucionar processos e melhorar significativamente a eficiência. No entanto, é crucial que examinemos de perto os impactos dessa implementação na sociedade e no meio ambiente. Nessa seção iremos avaliar os impactos no contexto do projeto de desenvolvimento de um robô de autoatendimento para o almoxarifado da AMBEV. Abordaremos cinco dimensões críticas: privacidade e proteção de dados, equidade e justiça, transparência e consentimento informado, responsabilidade social e viés e discriminação. Analisaremos cada uma dessas dimensões em detalhes, considerando suas implicações e fornecendo estratégias para mitigar possíveis preocupações. ",
     "sumario": [
     "- [Privacidade e Proteção de Dados]",
     "- [Equidade e Justiça]",
@@ -11,6 +11,6 @@
     "- [Responsabilidade social]",
     "- [Viés e discriminação]"
     ]
-  }
+  } 
 }
   
