@@ -50,10 +50,10 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'Andevs',
+        title: '',
         logo: {
           alt: 'Team logo',
-          src: 'img/logo.svg',
+          src: 'img/logo_andevs.png',
         },
       },
       footer: {
