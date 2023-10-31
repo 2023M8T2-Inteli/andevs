@@ -55,6 +55,13 @@ const config = {
           alt: 'Team logo',
           src: 'img/logo_andevs.png',
         },
+        items: [
+          {
+            label: 'Versão da Documentação:',
+            type: 'docsVersionDropdown',
+            position: 'right',
+          },
+        ]
       },
       footer: {
         style: 'dark',
@@ -63,7 +70,7 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
+                label: 'Docs',
                 to: '/docs/intro',
               },
             ],
