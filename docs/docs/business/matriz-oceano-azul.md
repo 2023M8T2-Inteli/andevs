@@ -42,3 +42,7 @@ Seguindo agora para os pilares da Matriz, ela foca em 4 necessidades, sendo elas
 ## Criar
 
 - Oportunidade de aprimorar o robô com novas funções, por exemplo reconhecimento de imagem ou um suporte para conseguir levar algumas peças.
+
+# Explicação
+Mediante ao uma análise da proposta de solução, foi possível identificar que o projeto é viável, pois ela atende as necessidades do cliente, sendo elas: reduzir o tempo de deslocamento do manutentor, eliminar a necessidade de mobilidade do manutentor para peças de pequeno porte no estoque/almoxerifado, aumentar a produtividade do manutentor e a eficiência de serviço e criar oportunidade de aprimorar o robô com novas funções.
+Além disso, o projeto comparado com outras soluções já existente no mercado, principalmente em relação ao Preço de Implementação, Custo de Manutenção e Instalação, o projeto apresenta uma melhor relação custo-benefício, sendo assim, uma solução viável para o cliente.
