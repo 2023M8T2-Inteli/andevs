@@ -26,3 +26,11 @@ Com base nisso criamos uma segunda versão para a arquitetura que tem sua estrut
 Assim, trabalhamos com uma arquitetura em modulos que pode apresentar algumas vantagens, como: 
 - A cada Sprint conseguimos entregar um módulo completo 
 - Inclusão futura de novos módulos/funcionalidades no sistema.
+
+### Arquitetura V1.1
+
+Na segunda Sprint, observamos que tópico de interface teve uma atualização de arquitetura, sendo ela a seguinte:
+
+- A divisão de duas interfaces, uma para o usuário e outra para o robô, sendo que a interface do usuário é responsável por receber os comandos de voz ou de texto, e a interface do robô é responsável por receber os resultados da pesquisa e mostrar o status do progresso de busca da peça.
+
+![Arquitetura - V1.1](./img/arq-v1.1.png)
