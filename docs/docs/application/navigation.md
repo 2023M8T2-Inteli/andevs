@@ -37,4 +37,4 @@ Com este script em execução, você poderá interagir com o sistema, inserindo 
 
 ### Sistema de Navegação no Mapa Desenvolvido 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Ezelf2W-h5s?si=AMTc1iST_gfWI7bv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NDvd92DEOpM?si=AK-DZRrjmOjbEWGo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
