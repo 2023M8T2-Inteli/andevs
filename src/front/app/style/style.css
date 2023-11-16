@@ -1,0 +1,49 @@
+.body-pedido_req{
+    overflow: hidden;
+    background-image: url('img/pedido_de_requisicao.png'); 
+    background-size: cover;
+}
+
+.body-standby{
+    overflow: hidden;
+    background-image: url('img/bg-standby.png'); 
+    background-size: cover;
+}
+
+.align-clock-date{
+    display: flex;
+    justify-content: center;
+    margin: 5%;
+}
+
+.clock-date{
+    font-family: 'Orbitron', sans-serif;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#hour{
+    font-size: 120px;
+    color: #000000;
+    background: #00000000;
+}
+
+#date{
+    font-size: 30px;
+    color: #000000;
+    background: #00000000;
+}
+
+.line{
+    width: 20%;
+    height: 2px;
+    background: #000000;
+    margin: 10% 5px;
+}
+
+.row-items{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
