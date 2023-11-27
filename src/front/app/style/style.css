@@ -1,0 +1,80 @@
+body {
+  height: 100vh;
+  overflow: hidden;
+  background-image: url("img/pedido_de_requisicao.png");
+  background-size: contain;
+}
+.container {
+  height: 100%;
+  width: 100%;
+  /* background-color: #000000; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+.container .bottom .content div {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.container .bottom .content {
+  /* background-color: #000000; */
+
+  align-items: start;
+  display: flex;
+  flex-direction: column;
+}
+.container .bottom div h3 {
+  margin-right: 20px;
+}
+.container .bottom img {
+  width: 100px;
+  margin-right: 50px;
+}
+.container .bottom {
+  display: flex;
+}
+.body-standby {
+  overflow: hidden;
+  background-image: url("img/bg-standby.png");
+  background-size: cover;
+}
+
+.align-clock-date {
+  display: flex;
+  justify-content: center;
+  margin: 5%;
+}
+
+.clock-date {
+  font-family: "Orbitron", sans-serif;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#hour {
+  font-size: 120px;
+  color: #000000;
+  background: #00000000;
+}
+
+#date {
+  font-size: 30px;
+  color: #000000;
+  background: #00000000;
+}
+
+.line {
+  width: 20%;
+  height: 2px;
+  background: #000000;
+  margin: 10% 5px;
+}
+
+.row-items {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}

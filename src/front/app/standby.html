@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/style.css">
+  <title>standby</title>
+</head>
+
+
+<body class="body-standby">
+  <h1>
+    <div class="align-clock-date">
+      <div class="clock-date">
+        <div id="hour"></div>
+        <div class="row-items">
+          <div class="line"></div> <div id="date"></div> <div class="line"></div>
+        </div>
+      
+      </div>
+    </div>
+  </h1>
+  
+</body>
+
+<script>
+       function updateClock() {
+            const now = new Date();
+
+            // Obter hora formatada
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const formattedTime = `${hours}:${minutes}`;
+
+            // Obter data formatada
+            const day = now.getDate().toString().padStart(2, '0');
+            const month = (now.getMonth() + 1).toString().padStart(2, '0');
+            const year = now.getFullYear();
+            const formattedDate = `${day}/${month}/${year}`;
+
+            // Atualizar elementos HTML
+            document.getElementById('hour').innerHTML = formattedTime;
+            document.getElementById('date').innerHTML = formattedDate;
+        }
+
+        // Atualizar o relógio a cada segundo
+        setInterval(updateClock, 1000);
+
+        // Atualizar o relógio imediatamente ao carregar a página
+        window.addEventListener('DOMContentLoaded', updateClock);
+</script>
+
+</html>
