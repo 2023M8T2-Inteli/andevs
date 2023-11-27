@@ -1,0 +1,42 @@
+
+body {
+  height: 95vh;
+  overflow: hidden;
+}
+section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  justify-items: center;
+}
+section > img {
+  width: 100px;
+}
+.container img {
+  width: 60px;
+  height: 60px;
+}
+img + img {
+  margin-left: 50px;
+}
+.progress-bar .content {
+  height: 10px;
+  width: 50%;
+  background: #f4ac26;
+  border-radius: 10px;
+}
+.progress-bar {
+  width: 70vh;
+  height: 10px;
+  background: #ffe9bf;
+  border-radius: 10px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}

@@ -11,7 +11,7 @@ function createWindow() {
       nodeIntegration: true
     }
   })
-  win.loadFile('./app/pedido_req.html')
+  win.loadFile('./app/in_progress.html')
 }
 app.whenReady().then(createWindow)
 app.on('window-all-closed', () => {
