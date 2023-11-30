@@ -1,7 +1,7 @@
-// LoginPage.js
+// SignupPage.js
 import React from 'react';
-import { Form, Input, Button, Typography, notification, Image } from 'antd';
-import { UserOutlined, LockOutlined } from '@ant-design/icons';
+import { Form, Input, Button, Typography, Image } from 'antd';
+import { UserOutlined, MailOutlined, LockOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
 
 import logo from '../styles/images/logo.png';
@@ -9,25 +9,48 @@ import logo from '../styles/images/logo.png';
 const { Title } = Typography;
 
 const SignupPage = () => {
+  const [form] = Form.useForm(); // Adicionei esta linha para criar a instância do formulário
+
   const onFinish = (values) => {
-    // Lógica de autenticação ou envio dos dados
+    // Lógica de cadastro ou envio dos dados
     console.log('Received values:', values);
+  };
+
+  const validatePassword = (_, value, callback) => {
+    // Lógica de validação da senha
+    const formValues = form.getFieldsValue(); // Adicionei esta linha para obter os valores do formulário
+    if (value && value !== formValues.password) {
+      callback('As senhas não coincidem.');
+    } else {
+      callback();
+    }
   };
 
   return (
     <div style={{ textAlign: 'center', padding: '50px' }}>
+      {/* Elemento de onda */}
       <Image
         width={200}
         src={logo}
         preview={false}
       />
-      <Title level={2} style={{fontFamily:'Manrope'}}>Login</Title>
+
+      {/* Título da página */}
+      <Title level={2} style={{fontFamily:'Manrope'}}>Cadastro</Title>
+
+      {/* Formulário de Cadastro */}
       <Form
-        name="login-form"
+        name="signup-form"
         initialValues={{ remember: true }}
         onFinish={onFinish}
         style={{ maxWidth: '300px', margin: 'auto' }}
       >
+        {/* Nome Input */}
+        <Form.Item name="name" rules={[{ required: true, message: 'Por favor, insira seu nome.' }]}>
+          <Input prefix={<UserOutlined />} placeholder="Nome" />
+        </Form.Item>
+
+        {/* Email Input */}
         <Form.Item
           name="email"
           rules={[
@@ -35,21 +58,38 @@ const SignupPage = () => {
             { type: 'email', message: 'Por favor, insira um e-mail válido.' },
           ]}
         >
-          <Input prefix={<UserOutlined />} placeholder="E-mail" />
+          <Input prefix={<MailOutlined />} placeholder="E-mail" />
         </Form.Item>
+
+        {/* Senha Input */}
         <Form.Item
           name="password"
           rules={[{ required: true, message: 'Por favor, insira sua senha.' }]}
         >
           <Input.Password prefix={<LockOutlined />} placeholder="Senha" />
         </Form.Item>
+
+        {/* Confirmação de Senha Input */}
+        <Form.Item
+          name="confirmPassword"
+          rules={[
+            { required: true, message: 'Por favor, confirme sua senha.' },
+            { validator: validatePassword },
+          ]}
+        >
+          <Input.Password prefix={<LockOutlined />} placeholder="Confirme a senha" />
+        </Form.Item>
+
+        {/* Botão de Cadastro */}
         <Form.Item>
           <Button type="primary" htmlType="submit">
-            Entrar
+            Cadastrar
           </Button>
         </Form.Item>
+
+        {/* Texto e link para Login */}
         <Form.Item>
-          Ainda não tem um cadastro? <Link to="/signin">Cadastre-se</Link>
+          Já tem um cadastro? <Link to="/login">Logar</Link>
         </Form.Item>
       </Form>
     </div>
