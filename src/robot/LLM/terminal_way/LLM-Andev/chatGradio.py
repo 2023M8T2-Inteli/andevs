@@ -4,17 +4,26 @@ import requests
 import json
 import re
 from chatbot_actions import chatbot_print
+from datetime import datetime
+
+from loguru import logger
+
+def actual_datetime():
+    return datetime.now().strftime("%Y_%m_%d")
+
+logger.add(f"./logs/file_{actual_datetime()}.log", level="INFO")
 
 intent_dict = {
     r"Indo pegar [ao]?\s*([\w\s]+)": chatbot_print
 }
+
 
 def send_request(question):
     url = "http://localhost:11434/api/generate"
 
     # Dados a serem enviados no corpo da solicitação
     data = {
-        "model": "Alfred3",
+        "model": "Alfred",
         "prompt": question,
         "stream": False
     }
@@ -31,23 +40,27 @@ def send_request(question):
 
     else:
         # Se a solicitação não for bem-sucedida, exibe uma mensagem de erro
-        print(response.text)
+        logger.info(f"REQUEST ERROR: {response.text}")
         return f"Erro: {response.status_code}"
 
 # Função para gerar resposta do modelo GPT-3
 def generate_response(prompt, chat_history):
-    print('Making request...')
+    logger.info(f'Received user prompt: {prompt}.')
+    logger.info('Making request...')
     response = send_request(prompt)
-    print(response)
+    logger.info(f'Received model response: {response}.')
+    logger.info(f'Sending chat history back...')
     chat_history.append((prompt, response))
+    logger.info(f'Received chat history.')
+    logger.info('Looking for actions...')
     for key, function in intent_dict.items():
         pattern = re.compile(key)
         point = pattern.findall(response)
         if point:
-            print("Ação detectada")
-            print(point)
+            logger.info(f'Action found: {point}')
             function(point[0])
     
+    logger.info("Returning chat history...")
     return "", chat_history
 
 with gr.Blocks() as demo:
@@ -60,4 +73,5 @@ with gr.Blocks() as demo:
 
 # Execute a interface Gradio
 if __name__ == "__main__":
-    demo.launch()
+    logger.info('Initializing service...')
+    demo.launch(share=True)
