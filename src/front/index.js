@@ -11,7 +11,7 @@ function createWindow() {
       nodeIntegration: true
     }
   })
-  win.loadFile('./app/in_progress.html')
+  win.loadFile('./app/found.html')
 }
 app.whenReady().then(createWindow)
 app.on('window-all-closed', () => {
