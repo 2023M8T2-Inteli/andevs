@@ -38,7 +38,7 @@ Após validar as configurações acima, siga as instruções abaixo:
 
 ### Opção 1: Controle por meio da ponte SSH
 
-Esse passo só é necessário se a versão do Ubuntu instaldo no robô não possuir uma saída de vídeo. Caso contrário, pule para a opção 2.
+Esse passo só é necessário se a versão do Ubuntu instaldo no robô não possuir nenhuma saída de vídeo. Caso contrário, pule para a opção 2.
 
 A ponte SSH permite que o robô seja controlado remotamente por meio de um outro terminal, ou seja, de outro computador, desde que ambos estajam na mesma rede. Para isso, siga as instruções abaixo:
 
@@ -69,6 +69,8 @@ A ponte SSH permite que o robô seja controlado remotamente por meio de um outro
     ros2 run turtlebot3_teleop teleop_keyboard
     ```
 
+Com isso, o robô já pode ser controlado remotamente.
+
 
 ### Opção 2: Controle por meio de um terminal no robô direto
 
@@ -81,8 +83,10 @@ Caso seja possível conectar um monitor ao robô, siga as instruções abaixo:
     ```
     **Nota:** Até aqui, o robô já consegue executar os procedimentos estabelecidos nos códigos dentro dos lançadores. Caso você queira executar o teleop (Comando manual), siga para o próximo passo
 
-2. Digite o seguinte comando para iniciar o teleop em um novo terminal em um computador diferente:
+2. Digite o seguinte comando para iniciar o teleop em um novo terminal em um computador diferente (desde que estejam na mesma rede) ou no mesmo terminal, com um teclado conectado ao robô:
 
     ```bash
     ros2 run turtlebot3_teleop teleop_keyboard
     ```
+
+Com isso, o robô já pode ser controlado remotamente.
