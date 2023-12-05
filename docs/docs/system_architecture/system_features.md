@@ -48,8 +48,40 @@ ollama create <nome para o seu modelo> -f Modelfile
 ollama run <nome do modelo>
 ```
 
-## Integração LLM com o Robô
+### Integração LLM com o Robô
 
-O código localizado em `~/src/........` é responsável por integrar o LLM com o robô. Ele é responsável por receber o comandos, interpretar o comando e enviar o comando para o robô executar. Para executar o código, basta digitar o seguinte comando:
+O código localizado em `~/src/robot/LLM/terminal_way/LLM-Andev/testes` é responsável por integrar o LLM com o robô. Ele é responsável por receber o comandos, interpretar o comando e enviar o comando para o robô executar. Para executar o código, basta digitar o seguinte comando:
 
-```bash
+```python3 integracao.py```
+
+Em seguida será necessário acessar o servidor responsável pela interface de interação: 
+
+```
+ http://127.0.0.1:7860/
+```
+
+## Interface do Usuário
+
+Além disso, está sendo desenvolvida uma interface de front-end para a interação do usuário com o sistema. 
+Para acessar a interface do front-end desenvolvido em React.js é necessário: 
+
+1. Acessar Pasta com Servidor da Interface: 
+```
+cd /src/web/alfred
+```
+
+2. Instalar as Dependências:
+```
+npm install
+```
+
+4. Iniciar o Servidor: 
+```
+npm start
+```
+
+3. Acessar Rota:
+```
+http://localhost:3000/
+```
+
