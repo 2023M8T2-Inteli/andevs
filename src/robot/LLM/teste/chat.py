@@ -12,15 +12,10 @@ from langchain.text_splitter import CharacterTextSplitter
 from langchain.vectorstores import FAISS
 from langchain.embeddings.openai import OpenAIEmbeddings
 from dotenv import load_dotenv
-from langchain.llms import Ollama
-
 import gradio as gr
 
 
 class LLMNode(Node):
-
-    load_dotenv()
-
     def __init__(self):
         super().__init__('llm_node')
         
@@ -36,10 +31,11 @@ class LLMNode(Node):
         self.get_logger().info("LLM Node created successfully")
 
     def load(self):
+        load_dotenv()
 
-        model = Ollama(model="mistral")
+        model = ChatOpenAI(model="gpt-3.5-turbo")
 
-        loader = PyPDFLoader("/home/gabriela/Documents/GitHub/andevs/src/robot/LLM/teste/data/points.pdf")
+        loader = PyPDFLoader("./data/points.pdf")
         pages = loader.load_and_split()
 
         text_splitter = CharacterTextSplitter(
