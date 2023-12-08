@@ -43,8 +43,8 @@ def pose(pose_x, pose_y, pose_z):
     rclpy.shutdown()
 
 dict_tool = {
-    "martelo": [1.25, 0.516],
-    "chave de fenda": [1.1, 2.0],
+    "martelo": [1.25, 0.516, 0.0],
+    "chave de fenda": (11, 39),
     "serrote": [0.0, 0.0],
     "parafusadeira": (8, 88),
     "alicate": (75, 43),
@@ -65,9 +65,9 @@ create_pose_stamped()
 def chatbot_print(objeto):
     waypoint = []
     print(f"Indo pegar {objeto}")
-    pos = dict_tool[objeto.lower()]
+    pos = dict_tool[objeto]
     print(f"Posição: {pos[0]}, {pos[1]}")
-    pose(float(pos[0]), float(pos[1]), 0.0)
+    pose(pos[0], pos[1], 0.0)
     
     # waypoint.append(create_pose_stamped(nav, pos[0], pos[1], 0.0))
 
