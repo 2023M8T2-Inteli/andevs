@@ -44,7 +44,7 @@ def pose(pose_x, pose_y, pose_z):
 
 dict_tool = {
     "martelo": [1.25, 0.516],
-    "chave de fenda": [1.1, 2.0],
+    "chave de fenda": [1.1, 1.0],
     "serrote": [0.0, 0.0],
     "parafusadeira": (8, 88),
     "alicate": (75, 43),

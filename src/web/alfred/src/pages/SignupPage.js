@@ -47,7 +47,7 @@ const SignupPage = () => {
       >
         {/* Nome Input */}
         <Form.Item name="name" rules={[{ required: true, message: 'Por favor, insira seu nome.' }]}>
-          <Input prefix={<UserOutlined />} placeholder="Nome" />
+          <Input style={{border: '2pt solid #001348', borderRadius: '50px'}} prefix={<UserOutlined />} placeholder="Nome" />
         </Form.Item>
 
         {/* Email Input */}
@@ -58,7 +58,7 @@ const SignupPage = () => {
             { type: 'email', message: 'Por favor, insira um e-mail válido.' },
           ]}
         >
-          <Input prefix={<MailOutlined />} placeholder="E-mail" />
+          <Input style={{border: '2pt solid #001348', borderRadius: '50px'}} prefix={<MailOutlined />} placeholder="E-mail" />
         </Form.Item>
 
         {/* Senha Input */}
@@ -66,7 +66,7 @@ const SignupPage = () => {
           name="password"
           rules={[{ required: true, message: 'Por favor, insira sua senha.' }]}
         >
-          <Input.Password prefix={<LockOutlined />} placeholder="Senha" />
+          <Input.Password style={{border: '2pt solid #001348', borderRadius: '50px'}} prefix={<LockOutlined />} placeholder="Senha" />
         </Form.Item>
 
         {/* Confirmação de Senha Input */}
@@ -77,7 +77,7 @@ const SignupPage = () => {
             { validator: validatePassword },
           ]}
         >
-          <Input.Password prefix={<LockOutlined />} placeholder="Confirme a senha" />
+          <Input.Password style={{border: '2pt solid #001348', borderRadius: '50px'}} prefix={<LockOutlined />} placeholder="Confirme a senha" />
         </Form.Item>
 
         {/* Botão de Cadastro */}
