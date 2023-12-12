@@ -2,3 +2,5 @@ docs/node_modules
 docs/.docusaurus/
 docs/build/
 node_modules
+
+src/STT/.env
