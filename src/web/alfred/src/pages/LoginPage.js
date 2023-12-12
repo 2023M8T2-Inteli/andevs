@@ -1,5 +1,5 @@
-import React from 'react';
-import { Form, Input, Button, Typography, notification, Image } from 'antd';
+import React from 'react';  
+import { Form, Input, Button, Typography, notification, Image, Col } from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
 
@@ -15,6 +15,7 @@ const LoginPage = () => {
   
   return (
     <div style={{ textAlign: 'center', padding: '50px' }}>
+      <Col>
       <Image
         width={200}
         src={logo}
@@ -51,6 +52,7 @@ const LoginPage = () => {
           Ainda não tem um cadastro? <Link to="/signup">Cadastre-se</Link>
         </Form.Item>
       </Form>
+      </Col>
     </div>
   );
 };
