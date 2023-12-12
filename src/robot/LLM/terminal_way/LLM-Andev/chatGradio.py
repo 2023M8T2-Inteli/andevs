@@ -55,7 +55,6 @@ with gr.Blocks() as demo:
     chatbot = gr.Chatbot()
     msg = gr.Textbox()
     clear = gr.ClearButton([msg, chatbot])
-
     msg.submit(generate_response, [msg, chatbot], [msg, chatbot])
 
 # Execute a interface Gradio

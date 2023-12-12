@@ -1,0 +1,9 @@
+{
+    "label": "STT - TTS",
+    "position": 10,
+    "link": {
+      "type": "generated-index",
+      "description": "Desenvolvimento, Teste e Execução do Speech to Text e o Text to Speech."
+    }
+  }
+  

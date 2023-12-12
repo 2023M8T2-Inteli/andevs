@@ -1,5 +1,5 @@
-import React from 'react';
-import { Form, Input, Button, Typography, notification, Image } from 'antd';
+import React from 'react';  
+import { Form, Input, Button, Typography, notification, Image, Col } from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
 
@@ -11,10 +11,11 @@ const LoginPage = () => {
   const onFinish = (values) => {
     // Lógica de autenticação ou envio dos dados
     console.log('Received values:', values);
-  };
-
+  }
+  
   return (
     <div style={{ textAlign: 'center', padding: '50px' }}>
+      <Col>
       <Image
         width={200}
         src={logo}
@@ -34,16 +35,16 @@ const LoginPage = () => {
             { type: 'email', message: 'Por favor, insira um e-mail válido.' },
           ]}
         >
-          <Input prefix={<UserOutlined />} placeholder="E-mail" />
+          <Input style={{border: '2pt solid #001348', borderRadius: '50px'}} prefix={<UserOutlined />} placeholder="E-mail" />
         </Form.Item>
         <Form.Item
           name="password"
           rules={[{ required: true, message: 'Por favor, insira sua senha.' }]}
         >
-          <Input.Password prefix={<LockOutlined />} placeholder="Senha" />
+          <Input.Password style={{border: '2pt solid #001348', borderRadius: '50px'}} prefix={<LockOutlined />} placeholder="Senha" />
         </Form.Item>
         <Form.Item>
-          <Button type="primary" htmlType="submit">
+          <Button type="primary" htmlType="submit" href="/gravacao">
             Entrar
           </Button>
         </Form.Item>
@@ -51,6 +52,7 @@ const LoginPage = () => {
           Ainda não tem um cadastro? <Link to="/signup">Cadastre-se</Link>
         </Form.Item>
       </Form>
+      </Col>
     </div>
   );
 };
