@@ -2,10 +2,15 @@ import gradio as gr
 import openai
 import os
 import pyttsx3
+from dotenv import load_dotenv
 
-openai.api_key = "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"  # Substitua com sua chave API do OpenAI
+load_dotenv()
+openai.api_key = os.getenv("OPENAI_API_KEY") 
 
-messages = [{"role": "system", "content": 'You are a therapist. Respond to all input in 25 words or less.'}]
+with open("./data.txt", "r", encoding="utf-8") as file:
+        context = file.read()
+
+messages = [{"role": "system", "content": context}]
 
 def transcribe(audio, text):
     global messages
