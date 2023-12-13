@@ -44,7 +44,7 @@ def pose(pose_x, pose_y, pose_z):
 
 dict_tool = {
     "martelo": [1.25, 0.516],
-    "chave de fenda": (11, 39),
+    "chave de fenda": [0.851, 1.52],
     "serrote": [0.0, 0.0],
     "parafusadeira": (8, 88),
     "alicate": (75, 43),
@@ -69,15 +69,10 @@ def chatbot_print(objeto):
     print(f"Posição: {pos[0]}, {pos[1]}")
     pose(pos[0], pos[1], 0.0)
     
-    # waypoint.append(create_pose_stamped(nav, pos[0], pos[1], 0.0))
-
+    # waypoint.append((pos[0], pos[1], 0.0))
     # nav.goToWaypoints(waypoint)
     # while not nav.isTaskComplete():
     #     print(nav.getFeedback())
     
-    # pos = dict_tool[objeto]
-    # print(f"Posição: {pos}")
-    # return f"Indo pegar {objeto}"
-
 if __name__ == "__main__":
     chatbot_print()
