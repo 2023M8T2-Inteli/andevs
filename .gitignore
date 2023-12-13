@@ -4,3 +4,4 @@ docs/build/
 node_modules
 
 src/STT/.env
+src/LLM/LLM-Andev/.env
