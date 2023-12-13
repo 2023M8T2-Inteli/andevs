@@ -3,41 +3,52 @@ import openai
 import os
 import pyttsx3
 
+openai.api_key = "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"  # Substitua com sua chave API do OpenAI
 
-openai.api_key = "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"  # Substitua com sua chave API do OpenAI
-messages = [{"role": "system", "content": 'Your name is Alfred, you are a guidance robot for a warehouse at the Ambev brewery. Based on this, you know the location of parts and tools within the warehouse. And it is willing to help the user in the search for parts.Ferramentas Manuais:Caixa de Chaves de Fenda: (10, 5) Jogo de Alicates: (12, 6) Martelos: (11, 4) Equipamentos Eletrônicos: Multímetros: (15, 8) Osciloscópios: (14, 10) Fontes de Alimentação: (13, 7) Peças Mecânicas:Rolamentos: (5, 5)Engrenagens: 6, 7) Molas: (4, 6)Fios e Cabos:Caixas de Cabos Elétricos: (18, 9)Carretéis de Fios: (17, 8)Ferramentas de Soldagem:Máquinas de Solda: (8, 11)Eletrodos de Solda: (9, 12)Peças Eletrônicas:Resistores e Capacitores: (16, 5)Circuitos ntegrados: (16, 7)EPIs (Equipamentos de Proteção Individual):Capacete: (2, 2)Luvas de Segurança: (3, 3)Óculos de Proteção: (1, 2)'}]
+messages = [{"role": "system", "content": 'You are a therapist. Respond to all input in 25 words or less.'}]
 
 def transcribe(audio, text):
     global messages
-
     if audio:
         audio_filename_with_extension = audio + '.wav'
         os.rename(audio, audio_filename_with_extension)
-
+    
         audio_file = open(audio_filename_with_extension, "rb")
         transcript = openai.Audio.transcribe("whisper-1", audio_file)
+    
         messages.append({"role": "user", "content": transcript["text"]})
 
-    messages.append({"role": "user", "content": text})
+        response = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=messages)
 
-    response = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=messages)
-    system_message = response["choices"][0]["message"]
-    messages.append(system_message)
+        system_message = response["choices"][0]["message"]
+        messages.append(system_message)
 
-    # Initialize pyttsx3 with Portuguese language
-    engine = pyttsx3.init()
-    engine.setProperty('voice', 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\TTS_MS_PT-BR_MARIA_11.0')
+        engine = pyttsx3.init()
+        engine.setProperty('voice', 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\TTS_MS_PT-BR_MARIA_11.0')
+        engine.say(system_message['content'])
+        engine.runAndWait()
 
-    engine.say(system_message['content'])
-    engine.runAndWait()
+        chat_transcript = ""
+        for message in messages:
+            if message['role'] != 'system':
+                chat_transcript += message['role'] + ": " + message['content'] + "\n\n"
+        return chat_transcript
+    else:
+        messages.append({"role": "user", "content": text})
+        response = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=messages)
+        system_message = response["choices"][0]["message"]
+        messages.append(system_message)
+        engine = pyttsx3.init()
+        engine.setProperty('voice', 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\TTS_MS_PT-BR_MARIA_11.0')
+        engine.say(system_message['content'])
+        engine.runAndWait()
+        chat_transcript = ""
+        for message in messages:
+            if message['role'] != 'system':
+                chat_transcript += message['role'] + ": " + message['content'] + "\n\n"
+        return chat_transcript
 
-    chat_transcript = ""
-    for message in messages:
-        if message['role'] != 'system':
-            chat_transcript += message['role'] + ": " + message['content'] + "\n\n"
+    
 
-    return chat_transcript
-
-
-ui = gr.Interface(fn=transcribe, inputs=["audio", gr.Textbox(label="Texto")], outputs="text")
+ui = gr.Interface(fn=transcribe, inputs=[gr.Audio(type="filepath"), 'text'], outputs="text")
 ui.launch()
