@@ -1,6 +1,6 @@
 dict_tool = {
     "martelo": (4, 5),
-    "chave de fenda": (11, 39),
+    "chave de fenda": [0.851, 1.52], 
     "serrote": (63, 51),
     "parafusadeira": (8, 88),
     "alicate": (75, 43),

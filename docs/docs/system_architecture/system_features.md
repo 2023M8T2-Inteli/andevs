@@ -35,24 +35,16 @@ Com isso, é possível visualizar o mapa, a localização do robô, consegue ver
 
 ## LLM
 
-O "Large Language Model" (LLM) refere-se a modelos de linguagem de grande porte que são treinados em vastos conjuntos de dados para compreender e gerar texto de maneira natural. Esses modelos são uma forma de inteligência artificial projetada para entender e produzir linguagem humana.
-A solução utiliza o modelo dolphin2.2-mistral, diponibilizado pelo Ollama. Um modello local onde utiliza recursos computacionais da própria máquina para realizar a inferência.
-O documento que gera o modelo já configurado é o Modelfile localizado em: `~/src/LLM/modelfile`. Para executar o documento, basta digitar o seguinte comando:
+O ChatGPT é um modelo de linguagem de grande porte treinado pela OpenAI. Ele oferece uma capacidade avançada de entender e gerar texto natural. A solução agora incorpora o ChatGPT como modelo de LLM, proporcionando respostas mais sofisticadas e versáteis durante a interação com o usuário.
 
-```bash
-ollama create <nome para o seu modelo> -f Modelfile
-```
- e para utilizar o modelo, basta digitar o seguinte comando:
+Para utilizar o ChatGPT como modelo de LLM, o código pode ser encontrado em src/robot/LLM/LLM-Andev/gradio_pdf_stream.py. Certifique-se de fornecer sua API Key da OpenAI no código para garantir o acesso ao ChatGPT.
 
-```bash
-ollama run <nome do modelo>
-```
 
 ### Integração LLM com o Robô
 
-O código localizado em `~/src/robot/LLM/terminal_way/LLM-Andev/testes` é responsável por integrar o LLM com o robô. Ele é responsável por receber o comandos, interpretar o comando e enviar o comando para o robô executar. Para executar o código, basta digitar o seguinte comando:
+O código localizado em ~src/robot/LLM/LLM-Andev/ integra o ChatGPT com o robô. Ele recebe comandos, os interpreta e envia ao robô para execução. Execute o código com:
 
-```python3 integracao.py```
+```python3 gradio_pdf_stream.py```
 
 Em seguida será necessário acessar o servidor responsável pela interface de interação: 
 
