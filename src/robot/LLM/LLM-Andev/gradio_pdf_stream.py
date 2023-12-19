@@ -18,7 +18,7 @@ openai.api_key = os.getenv("OPENAI_API_KEY")
 # create_pose_stamped()
 
 intent_dict = {
-    r"(((\*)|(\* ))\[(-?\d+\.\d+),\s*(-?\d+\.\d+)\])|(((\*)|(\* ))(-?\d+\.\d+),\s*(-?\d+\.\d+))": chatbot_print
+    r"(((\*)|(\* ))?\[(-?\d+\.\d+),\s*(-?\d+\.\d+)\])|(((\*)|(\* ))(-?\d+\.\d+),\s*(-?\d+\.\d+))": chatbot_print
 }
 
 def send_request(user_prompt):
