@@ -1,0 +1,72 @@
+.bullets {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg{
+    position: absolute;
+    /* z-index: 1; */
+    top: 0;
+}
+.bullets span {
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  background-color: #B89300;
+  border-radius: 100%;
+}
+.active {
+  background: #21409a  !important;
+}
+
+.circle {
+  background-color: #fff3c5;
+  padding: 20px;
+  border-radius: 100%;
+  width: 330px;
+  height: 330px;
+  display: flex;
+  justify-content: center;
+  border: 5px solid #21409a;
+}
+.container {
+  /* background-image: url("../images/bg-wave.svg"); */
+  height: 95vh;
+  padding: 20px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
+}
+h4 {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 41px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #001348;
+}
+
+footer button {
+  display: block;
+  margin-left: auto;
+}
+
+button {
+  border: 4px solid #001348;
+  font-weight: bold;
+  background-color: #ffd840;
+  padding: 10px 15px;
+  border-radius: 25px;
+  height: 47px;
+  /* width: 63.75px; */
+}
