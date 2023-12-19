@@ -30,9 +30,11 @@ const LoginPage = () => {
           <Row justify='center'>
             <Image width={200} src={logo} preview={false} />
           </Row>
-          <Title level={2} style={{ fontFamily: "Manrope" }}>
-            Login
-          </Title>
+          <Row justify='center'>
+            <Title level={2} style={{ fontFamily: "Manrope" }}>
+              Login
+            </Title>
+          </Row>
           <Form
             name="login-form"
             initialValues={{ remember: true }}
@@ -68,11 +70,11 @@ const LoginPage = () => {
               />
             </Form.Item>
             <Row justify='center'>
-            <Form.Item>
-              <Button type="primary" htmlType="submit" href="/gravacao">
-                Entrar
-              </Button>
-            </Form.Item>
+              <Form.Item>
+                <Button type="primary" htmlType="submit" href="/tutorial">
+                  Entrar
+                </Button>
+              </Form.Item>
             </Row>
             <Form.Item>
               Ainda não tem um cadastro? <Link to="/signup">Cadastre-se</Link>

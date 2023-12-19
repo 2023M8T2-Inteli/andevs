@@ -1,68 +1,83 @@
-// Tutorial.js
 import React, { useState } from "react";
-
-import mic from "../images/microphone.svg";
-import text from "../images/text.svg";
-import check from "../images/check.svg";
-import wave from "../images/bg-wave.svg";
+import { Button, Steps, Row, Col, Image, Space, Card } from "antd";
+import { AudioOutlined, FormOutlined, CheckOutlined } from "@ant-design/icons";
+import { useNavigate } from "react-router-dom";
 
 import style from "./tutorial.module.css";
+import microphone from "../images/microphone.png";
+import text from "../images/text.png";
+import check from "../images/check.png";
 
 const Tutorial = () => {
+  const navigate = useNavigate();
+  const [currentStep, setCurrentStep] = useState(0);
+  
   const steps = [
     {
       waveColor: "#FFD700",
-      icon: mic,
-      text: "Para gravação, clique no íncone do microfone e pressione até terminar de falar.",
+      image: <Image src={microphone} preview='false' width={80} />,
+      description: "Clique no ícone do microfone e pressione até terminar de falar.",
     },
     {
       waveColor: "#00CED1",
-      icon: text,
-      text: "Para a digitalização, clique no ícone de texto e digite a peça desejada.",
+      image: <Image src={text} preview='false' width={100} />,
+      description: "Clique no ícone de texto e digite a peça desejada.",
     },
     {
       waveColor: "#00CED1",
-      icon: check,
-      text: "Quando a informação for processada, selecione o check para a confirmação da informação indicada.",
+      image: <Image src={check} preview='false' width={100} />,
+      description: "Se estiver tudo correto, selecione o check para a confirmação.",
     },
-    // Adicione mais etapas conforme necessário
   ];
-
-  const [currentStep, setCurrentStep] = useState(0);
 
   const handleNext = () => {
     if (currentStep < steps.length - 1) {
       setCurrentStep(currentStep + 1);
     } else {
-      // Se for a última etapa, pode navegar para a próxima rota ou fazer o que for necessário
-      console.log("Final do tutorial");
+      navigate("/record");
+    }
+  };
+
+  const handlePrev = () => {
+    if (currentStep > 0) {
+      setCurrentStep(currentStep - 1);
     }
   };
 
   return (
-    <>
-      <div
-        className={style.container}
-        style={{
-          backgroundImage: `url(${wave})`,
-          backgroundRepeat: "no-repeat",
-        }}
-      >
-        <div className={style.bullets}>
-          {[0, 1, 2].map((e) => (
-            <span className={currentStep > e ? style.active : ""}></span>
-          ))}
-        </div>
+    <div className={style.container}>
 
-        <div className={style.circle}>
-          <img alt="" src={steps[currentStep].icon} />
+      <Steps current={currentStep} responsive={false} style={{ padding: 30 }}>
+        {steps.map((step, index) => (
+          <Steps.Step key={index} />
+        ))}
+      </Steps>
+
+      <Row justify='center'>
+        <div className={style.circle} style={{ borderColor: steps[currentStep].waveColor }} >
+          {steps[currentStep].image}
         </div>
-        <footer>
-          <h4>{steps[currentStep].text}</h4>
-          <button onClick={handleNext}>Próximo</button>
-        </footer>
+      </Row>
+      <div style={{ padding: 24 }}>
+        <Card style={{ backgroundColor: 'rgba(255, 255, 255, 0.5)' }}>
+          <h4 style={{ fontFamily: 'Poppins', fontWeight: 400 }}>{steps[currentStep].description}</h4>
+        </Card>
       </div>
-    </>
+      <Row justify='end' style={{ justifyContent: 'space-evenly' }}>
+        <Space size={10}>
+          <Col>
+            <Button type="default" onClick={handlePrev} disabled={currentStep === 0}>
+              Voltar
+            </Button>
+          </Col>
+          <Col>
+            <Button type="primary" onClick={handleNext}>
+              {currentStep === steps.length - 1 ? "Finalizar" : "Próximo"}
+            </Button>
+          </Col>
+        </Space>
+      </Row>
+    </div>
   );
 };
 
