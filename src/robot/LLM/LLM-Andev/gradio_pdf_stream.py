@@ -99,9 +99,40 @@ def generate_response(prompt=None, audio_prompt=None, chat_history=None):
     
     return "", chat_history
 
-with gr.Blocks() as demo:
+css = """
+.gradio-container{
+    background-color: #FFF3C5 !important;
+}
+
+.block{
+    border:2pt solid  #001348 !important;
+}
+
+.lg.secondary{
+    background-color:#001348 !important; 
+    color:white !important; 
+    border-radius: 30px;
+}
+
+#component-2{
+    border:2pt solid  #001348 !important
+} 
+
+#component-5{
+    background-color: white !important; 
+    color: #001348 !important; 
+    border: 2pt solid #001348
+    }
+
+.avatar-image{
+    width: 200px !important;
+}
+
+"""
+
+with gr.Blocks(theme=gr.themes.Soft(primary_hue="blue", secondary_hue="yellow"), css=css) as demo:
     title="LLM Chatbot"
-    chatbot = gr.Chatbot()
+    chatbot = gr.Chatbot(avatar_images=["https://cdn-icons-png.flaticon.com/512/6596/6596121.png", "https://cdn.dribbble.com/users/722835/screenshots/4082720/bot_icon.gif"])
     msg = gr.Textbox()
     audio_input = gr.Audio(type="filepath")
     submit_button = gr.Button(value="Enviar Áudio")
