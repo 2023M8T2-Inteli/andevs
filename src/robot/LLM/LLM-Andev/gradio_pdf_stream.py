@@ -15,7 +15,7 @@ from langchain.embeddings.openai import OpenAIEmbeddings
 load_dotenv()
 openai.api_key = os.getenv("OPENAI_API_KEY") 
 
-# create_pose_stamped()
+create_pose_stamped()
 
 intent_dict = {
     r"(((\*)|(\* ))?\[(-?\d+\.\d+),\s*(-?\d+\.\d+)\])|(((\*)|(\* ))(-?\d+\.\d+),\s*(-?\d+\.\d+))": chatbot_print
