@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { Fragment, useState } from "react";
 import { Button, Row, Input, Col, Space } from "antd";
-import { SearchOutlined } from "@ant-design/icons";
+import { SearchOutlined, LogoutOutlined } from "@ant-design/icons";
 
 import styles from "./styles.module.css";
 
@@ -11,10 +11,19 @@ const Gravacao = () => {
   const [thermsModalVisible, setThermsModalVisible] = useState(true);
 
   return (
+    <Fragment>
+    <Row style={{height:'8vh', backgroundColor:"#001348", color:'#fff', alignContent:'center'}} align='middle'>
+        <Col span={20} align='start'>
+          <h1 className={styles.title} style={{marginLeft:'5%'}}>ALFRED</h1>
+        </Col>
+        <Col align='end'>
+        <Button shape="circle" icon={<LogoutOutlined />} href='/login'></Button>
+        </Col>
+      </Row>
     <div className={styles.container}>
       <Row justify='center' style={{ margin: '3%' }}>
-        <Col span={20} style={{ margin: '3%' }}>
-          <Input style={{ border: '2pt solid #001348', borderRadius: '50px', height: '5vh' }} placeholder="O que você procura?" />
+        <Col span={17} style={{ margin: '3%' }}>
+          <Input style={{ border: '2pt solid #001348', borderRadius: '50px', height: '5vh', fontSize:'14pt' }} placeholder="O que você procura?" />
         </Col>
         <Col style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
           <Button className={styles.search_button} icon={<SearchOutlined style={{ fontSize: '18pt' }} />} style={{ color: "white", width: '50px', height: '50px' }} />
@@ -39,10 +48,11 @@ const Gravacao = () => {
           className={styles.button_history}
           href="/history"
         >
-          Acessar Histórico
+          Visualizar Dados
         </Button>
       </Row>
     </div>
+    </Fragment>
   );
 };
 

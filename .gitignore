@@ -4,4 +4,15 @@ docs/build/
 node_modules
 
 src/STT/.env
-src/LLM/LLM-Andev/.env
+src/robot/LLM/LLM-Andev/.env
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak
+src/robot/LLM/LLM-Andev/.env
+src/robot/LLM/LLM-Andev/.env

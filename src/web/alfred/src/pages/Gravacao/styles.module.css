@@ -5,7 +5,7 @@
 .container {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 91vh;
     width: 100vw;
     justify-content: space-around;
     background-image: url('../../images/bg.png');
@@ -22,8 +22,8 @@
 }
 
 .record, .write {
-    height: 35vw;
-    width: 35vw;
+    height: 38vw;
+    width: 38vw;
     border-radius: 50%;
     background-color: #FFF3C5;
     border: 4px solid #21409A;
@@ -39,7 +39,7 @@
 }
 
 .buttonImage {
-    max-width: 100%;
+    max-width: 70%;
     height: auto;
 }
 
@@ -52,8 +52,10 @@
 .button_history {
     background-color: #FFD840;
     border: 2px solid #001348;
-    margin-bottom: 1rem;
     border-radius: 15px;
     font-size: 16pt;
     height: 5vh;
+    align-items: center;
+    display: flex;
+
 }
