@@ -8,6 +8,10 @@ Este pacote foi desenvolvido para implementar a funcionalidade de Speech to Text
 
 Este pacote foi projetado para implementar a funcionalidade de Text to Speech (TTS) em um ambiente ROS 2, utilizando a API do OpenAI. Ele permite a conversão de mensagens de texto em fala, proporcionando uma interação auditiva com o sistema. As respostas geradas de forma natural pela API do OpenAI são reproduzidas em áudio, enriquecendo a experiência do usuário.
 
+## Fluxo de Funcionamento: 
+
+![Diagrama de Comunicação](./img/Andevs.png) 
+
 ## Como Usar
 
 1. **Clonar o Repositório do Projeto:** 
@@ -39,4 +43,4 @@ Além disso, é necessário possuir uma chave de acesso para utilizar a API da O
 
 ## Demonstração
 
-[Assista à Demonstração no YouTube](https://www.youtube.com/embed/RStEpCzI9SE?si=G9uXJbvnUpPc5wha)
+<iframe width="900" height="450" src="https://www.youtube.com/embed/RStEpCzI9SE?si=Z4XIj7lPxOYCBeqE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
