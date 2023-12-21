@@ -28,6 +28,7 @@ Com base no protótipo demonstrado acima e a validação tanto com os principais
 
 
 
+
 ### 5. Chatbot com Aplicação de Contexto
 
 Passando para a etapa de desenvolvimento do Chatbot, criamos uma interface de interação para o usuário utilizando o sistema do Gradio integrado ao LLM da OpenAI. Esse sistema utiliza os conhecimentos do modelo com a referência de um arquivo pdf de instruções sobre as peças do almoxarifado. 
