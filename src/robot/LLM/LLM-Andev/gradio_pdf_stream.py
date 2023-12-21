@@ -11,6 +11,7 @@ from dotenv import load_dotenv
 from langchain.document_loaders import PyPDFLoader
 from langchain.chat_models import ChatOpenAI
 from langchain.embeddings.openai import OpenAIEmbeddings
+import pyttsx3
 
 load_dotenv()
 openai.api_key = os.getenv("OPENAI_API_KEY") 
@@ -77,6 +78,12 @@ def transcribe(audio):
     print(transcript['text'])
     return transcript['text']
 
+def speak_tts(response):
+    engine = pyttsx3.init()
+    engine.setProperty('voice', 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\TTS_MS_PT-BR_MARIA_11.0')
+    engine.say(response)
+    engine.runAndWait()
+
 def generate_response(prompt=None, audio_prompt=None, chat_history=None):
     if audio_prompt:
         audio_stt = transcribe(audio_prompt)
@@ -88,7 +95,7 @@ def generate_response(prompt=None, audio_prompt=None, chat_history=None):
             print(response)
             if point:
                 function(point[0])
-    
+        speak_tts(response)
         return "", chat_history
     else:
         response = send_request(prompt)
@@ -99,8 +106,8 @@ def generate_response(prompt=None, audio_prompt=None, chat_history=None):
             print(response)
             if point:
                 function(point[0])
-    
-    return "", chat_history
+        speak_tts(response)
+        return "", chat_history
 
 css = """
 .gradio-container{
