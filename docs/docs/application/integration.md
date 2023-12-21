@@ -7,7 +7,7 @@ sidebar_position: 4
 
 ## Integração de chatbot para o ROS2
 
-Em resumo, o arquivo **'integracao.py'** ativa o nosso chatbot Alfred, desenvolvido com base no modelo 'dolphin2.2-mistral', que está localizado no diretório de modelos em './andevs/src/robot/LLM/terminal_way/LLM-Andev/modelfile'. Suas instruções essencialmente o definem como um assistente para a empresa, e sua resposta final é "Indo pegar [ao] "ferramenta"". Todas as respostas do LLM são submetidas a um filtro regex. No entanto, quando essa resposta específica é gerada, ela aciona uma função que busca o objeto em um dicionário contendo um valor (coordenadas), representando a localização daquele objeto.
+Em resumo, o arquivo **'gradio_pdf_stream.py'** ativa o nosso chatbot Alfred, desenvolvido com base no modelo 'dolphin2.2-mistral', que está localizado no diretório de modelos em './andevs/src/robot/LLM/terminal_way/LLM-Andev/modelfile'. Suas instruções essencialmente o definem como um assistente para a empresa, e sua resposta final é "Indo pegar [ao] "ferramenta"". Todas as respostas do LLM são submetidas a um filtro regex. No entanto, quando essa resposta específica é gerada, ela aciona uma função que busca o objeto em um dicionário contendo um valor (coordenadas), representando a localização daquele objeto.
 
 **1. Importação de Bibliotecas:**
    - `gradio`: Biblioteca para criar interfaces de usuário interativas.
